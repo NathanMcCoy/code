@@ -1,0 +1,21 @@
+def parseArray(charArray):
+    output = ""
+    for i in range(len(charArray)):
+        if(charArray[i] == 'T'):
+            output += "A"
+        elif(charArray[i] == 'A'):
+            output += "T"
+        elif(charArray[i] == 'C'):
+            output += "G"
+        elif(charArray[i] == 'G'):
+            output += "C"
+        else:
+            return "Error RNA nucleobases found!"
+    return output
+testCases = int(input())
+for i in range(testCases):
+    currentLength = int(input())
+    currentSequence = input()
+    SequenceAsCharArray = list(currentSequence)
+    print(parseArray(SequenceAsCharArray))
+        
